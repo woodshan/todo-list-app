@@ -1,16 +1,19 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { TasksContext } from "../../Contexts/TasksContext"
 import Button from "../UI/Button/Button"
 import TextAreaField from "../UI/Forms/TextAreaField"
 import TextField from "../UI/Forms/TextField"
 
-const TaskForm = () => {
+const TaskForm = ({closeModal, value, index}) => {
 
-    const [formValue, setFormValue] = useState({
+    const [formValue, setFormValue] = useState(value ? value : {
         title: "",
         description: ""
     })
 
-    const [invalidField, setInvalidFields] = useState([])
+    const [invalidField, setInvalidFields] = useState([]);
+
+    const {addTask, editTask} = useContext(TasksContext)
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -18,6 +21,19 @@ const TaskForm = () => {
             alert("There are errors in the form")
             return;
         }
+
+        if(value && !isNaN(+index)) { // S'il y a une value en props => Modification
+            editTask({task: formValue, taskIndex: index})
+        } else { // Sinon création
+            addTask({
+                ...formValue,
+                createdAt: new Date(),
+                isDone: false,
+            })
+        }
+
+        
+        closeModal()
     }
 
     const handleError = (error) => {

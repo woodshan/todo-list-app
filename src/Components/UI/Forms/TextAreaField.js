@@ -9,9 +9,12 @@ const TextAreaField = ({label, name, placeholder, validation, value, onChange, o
 
     const handleChange = (event) => {
         const {value} = event.target;
-        validateField(value, validation);
         onChange(value);
     }
+
+    useEffect(() => {
+        validateField(value, validation);
+    }, [value])
 
     useEffect(() => {
         onError({name, error})
