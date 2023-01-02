@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About from './Components/About/About';
+import About from './pages/About';
 import TasksContextProvider from './Contexts/TasksContext';
-import Tasks from "./Components/Tasks/Tasks"
+import Tasks from "./pages/Tasks/index"
+import Api from './pages/Api';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "about/:name",
         element: <About />
+      },
+      {
+        path: "api",
+        element: <Api />
       }
     ]
   }

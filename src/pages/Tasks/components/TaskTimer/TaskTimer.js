@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { TasksContext } from "../../../Contexts/TasksContext";
-import useTimeParser from "../../../Hooks/useTimeParser";
-import useTimer from "../../../Hooks/useTimer";
-import Button from "../../UI/Button/Button";
+import { TasksContext } from "../../../../Contexts/TasksContext";
+import useTimeParser from "../../../../Hooks/useTimeParser";
+import useTimer from "../../../../Hooks/useTimer";
+import Button from "../../../../Components/UI/Button/Button";
 import style from "./TaskTimer.module.css"
 
 const TaskTimer = ({index, onCloseModal}) => {

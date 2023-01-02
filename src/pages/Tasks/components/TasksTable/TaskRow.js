@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { TasksContext } from "../../../Contexts/TasksContext";
-import useTimeParser from "../../../Hooks/useTimeParser";
-import Button from "../../UI/Button/Button";
-import Modal from "../../UI/Modal/Modal";
+import { TasksContext } from "../../../../Contexts/TasksContext";
+import useTimeParser from "../../../../Hooks/useTimeParser";
+import Button from "../../../../Components/UI/Button/Button"
+import Modal from "../../../../Components/UI/Modal/Modal";
 import TaskForm from "../TaskForm";
 import TaskTimer from "../TaskTimer/TaskTimer";
 

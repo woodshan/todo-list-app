@@ -1,8 +1,8 @@
 import { useContext, useState } from "react"
-import { TasksContext } from "../../Contexts/TasksContext"
-import Button from "../UI/Button/Button"
-import TextAreaField from "../UI/Forms/TextAreaField"
-import TextField from "../UI/Forms/TextField"
+import { TasksContext } from "../../../Contexts/TasksContext"
+import Button from "../../../Components/UI/Button/Button"
+import TextAreaField from "../../../Components/UI/Forms/TextAreaField"
+import TextField from "../../../Components/UI/Forms/TextField"
 
 const TaskForm = ({closeModal, value, index}) => {
 

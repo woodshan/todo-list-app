@@ -1,7 +1,7 @@
 import style from "./TasksTable.module.css"
 import TaskRow from "./TaskRow"
 import { useContext } from "react";
-import { TasksContext } from "../../../Contexts/TasksContext";
+import { TasksContext } from "../../../../Contexts/TasksContext";
 
 const TasksTable = () => {
 

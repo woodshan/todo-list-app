@@ -1,10 +1,10 @@
-import PageTitle from "../UI/PageTitle/PageTitle"
-import Button from "../UI/Button/Button"
+import PageTitle from "../../Components/UI/PageTitle/PageTitle"
+import Button from "../../Components/UI/Button/Button"
 import style from "./Tasks.module.css"
-import Modal from "../UI/Modal/Modal"
+import Modal from "../../Components/UI/Modal/Modal"
 import { useContext, useState } from "react"
-import TaskForm from "./TaskForm"
-import TasksTable from "./TasksTable/TasksTable"
+import TaskForm from "./components/TaskForm"
+import TasksTable from "./components/TasksTable/TasksTable"
 import { TasksContext } from "../../Contexts/TasksContext"
 
 const Tasks = () => {
