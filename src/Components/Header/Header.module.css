@@ -11,3 +11,10 @@ header h1 {
     margin: 0;
     color: #0B4F6C;
 }
+
+ul {
+    display:flex;
+    gap: 1rem;
+    align-items: center;
+    list-style: none;
+}
